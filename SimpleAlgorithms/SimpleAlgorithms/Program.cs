@@ -1,12 +1,25 @@
-﻿namespace SimpleAlgorithms
+﻿
+using SimpleAlgorithms.loop;
+
+namespace SimpleAlgorithms
 {
-    internal class Program
+    class Program
     {
-        /*
+        
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+                        // LOOP
+            int[] numbers = { 1, 3, 5, 7, 9, 12, 19, 21 };
+            // Loop.question1(numbers);
+            // Loop.question2(numbers);
+            // Loop.question3(numbers);
+            // Loop.question4(10, 20);
+            // Loop.question5();
+            // Loop.question6();
+            // Loop.question7();
+            // Loop.question8();
+            Loop.question9();
         }
-        */
+        
     }
 }
