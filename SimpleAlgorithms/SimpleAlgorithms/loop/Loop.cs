@@ -181,5 +181,189 @@ namespace SimpleAlgorithms.loop
 
         }
 
+        public static void question10()
+        {
+            List<int> numbers = new List<int>();
+            for (int i=0; i<5;i++)
+            { //Girilen 5 sayı içerisindeki minimum ve maksimum değerleri bulan program?
+                Console.WriteLine("Sayı: ");
+                int number = Convert.ToInt32(Console.ReadLine());
+                numbers.Add(number);
+            }
+            int min = numbers[0];
+            int max = numbers[0];
+            for (int i=1; i<numbers.Count; i++)
+            {
+                if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                }
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                }
+            }
+            Console.WriteLine($"Min:{min}, Max:{max}");
+        }
+
+        public static void question11()
+        { //N’e kadar tek sayıları yazdıran program?
+            Console.WriteLine("N: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for(int i=0; i<n;i++)
+            {
+                if (i % 2 == 1)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+
+        public static void question12()
+        { //Girilen sayının tam bölenlerini bulan program?
+            Console.WriteLine("Sayı: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            for (int i=1; i<number;i++)
+            {
+                if (number % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+
+        public static void question13()
+        {// Girilen sayının tam bölenlerinin sayısını bulan program?
+            Console.WriteLine("Sayı: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int count = 0;
+            for (int i=1; i<number; i++)
+            {
+                if (number %i == 0)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine($"Tam Bölenlerin Sayısı:{count}");
+        }
+
+
+        public static void question14()
+        { // n’e kadar ki tek sayıların toplamı, çift sayıların çarpımını hesaplayan program?
+            Console.WriteLine("N: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int total = 0;
+            int multi = 1;
+
+            for (int i=1; i<n; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    total += i;
+                }
+                if (i % 2 == 0)
+                {
+                    multi *= i;
+                }
+            }
+            Console.WriteLine($"Tek Sayıların Toplamı:{total}, Çift Sayıların Çarpımı:{multi}");
+        }
+
+        public static void question15()
+        { // Girilen sayının faktöriyelini hesaplayan program?
+            Console.WriteLine("Sayı: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int fak = 1;
+            for (int i=1; i<=number;i++)
+            {
+                fak *= i;
+            }
+            Console.WriteLine($"Faktöriyel:{fak}");
+        }
+
+        public static void question16()
+        { // Girilen n değerine göre Fibonacci serisinin ( 0 1 1 2 3 5 8 … ) ilk n terimini hesaplayınız?
+            Console.WriteLine("n: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int a = 0;
+            int b = 1;
+            int c = 0;
+
+            for ( int i=0; i<n;i++)
+            {
+                Console.Write(c + " ");
+                a = b;
+                b = c;
+                c = a + b;
+            }
+        }
+
+        public static void question17()
+        { // Girilen n adet sayı içerisinden pozitif, negatif ve sıfır sayısının kaçar adet tekrarlandığını bulan program?
+            Console.WriteLine("n: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int pozitif = 0;
+            int negatif = 0;
+            int sifir = 0;
+
+            for ( int i=0; i<n; i++)
+            {
+                Console.WriteLine("Sayı: ");
+                int sayi = Convert.ToInt32(Console.ReadLine());
+
+                if (sayi < 0)
+                {
+                    negatif += 1;
+                }
+                if (sayi > 0) 
+                {
+                    pozitif += 1;
+                }
+                if (sayi == 0 )
+                {
+                    sifir += 1; 
+                }
+            }
+            Console.WriteLine($"Pozitif Sayısı:{pozitif}, Negatif Sayısı:{negatif}, Sıfır Sayısı:{sifir}");
+        }
+
+        public static void question18()
+        { // Serinin ilk elemanı, toplam eleman sayısını ve artış değeri girildiğinde seri sonucunu hesaplayan program?
+            Console.WriteLine("İlk Eleman: ");
+            int ilkEleman = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Toplam Eleman: ");
+            int toplamEleman = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Artış Değeri: ");
+            int artis = Convert.ToInt32(Console.ReadLine());
+
+            int helper = ilkEleman;
+            for (int i=0; i<toplamEleman; i++)
+            {
+                Console.Write(helper + " ");
+                helper += artis;
+            }
+        }
+
+        public static void question19()
+        { // Girilen bir sayının asal çarpanlarını bulan program?
+            Console.WriteLine("Sayı: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            List<int> list = new List<int>();
+
+            // [2,]
+
+            for (int i = 2; i < number; i++)
+            {
+                if (number % i == 0)
+                {
+                    number = number / i;
+                    list.Add(i);
+                }
+            }
+            
+
+        }
     }
 }
