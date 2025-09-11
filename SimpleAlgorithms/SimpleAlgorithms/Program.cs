@@ -28,7 +28,11 @@ namespace SimpleAlgorithms
             // Loop.question16();
             // Loop.question17();
             // Loop.question18();
-            Loop.question19();
+            // Loop.question19();
+            // Loop.question20();
+            // Loop.question21();
+            // Loop.question22();
+            // Loop.question23();
         }
         
     }
