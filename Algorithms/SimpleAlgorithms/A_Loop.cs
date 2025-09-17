@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -445,7 +446,44 @@ namespace SimpleAlgorithms
             {
                 Console.Write("*" + " ");
             }
+        }
 
+        public static void question24()
+        { //Girilen cümleyi tersten yazdırın
+            Console.WriteLine("Cümle: ");
+            string cumle = Convert.ToString(Console.ReadLine());
+
+            string tersCumle = "";
+            for (int i = cumle.Length - 1; i >= 0; i--)
+            {
+                tersCumle += cumle[i];
+            }
+            Console.WriteLine($"Ters Cümle: {tersCumle}");
+        }
+
+        public static void question25()
+        { //Girilen cümledeki sesli ve sessiz harf sayısını bulun.
+            Console.WriteLine("Cümle: ");
+            string cumle = Convert.ToString(Console.ReadLine());
+            char[] sesliHarfler = { 'A', 'a', 'E', 'e', 'I', 'ı', 'İ', 'i', 'O', 'o', 'Ö', 'ö', 'U', 'u', 'Ü', 'ü' };
+
+            int sesliHarflerSayisi = 0;
+            int helper = 0;
+            for (int i = 0; i < cumle.Length; i++)
+            {
+                if (!Char.IsLetter(cumle[i]))
+                {
+                    helper++;
+                }
+                for (int j = 0; j < sesliHarfler.Length; j++)
+                {
+                    if (cumle[i] == sesliHarfler[j])
+                    {
+                        sesliHarflerSayisi++;
+                    }
+                }
+            }
+            Console.WriteLine($"Sesli Harf Sayısı:{sesliHarflerSayisi}, Sessiz Harf Sayısı:{(cumle.Length - helper) - sesliHarflerSayisi}");
         }
     }
 }
