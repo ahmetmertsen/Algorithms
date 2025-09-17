@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleAlgorithms.loop
+namespace SimpleAlgorithms
 {
-    internal class Loop
+    internal class A_Loop
     {
-         public static void question1(int[] numbers)
+        public static void question1(int[] numbers)
         { //Sayılar listesindeki hangi sayılar 3'ün katıdır ?
             foreach (int number in numbers)
             {
-                if (number % 3 == 0) 
+                if (number % 3 == 0)
                 {
                     Console.WriteLine(number);
                 }
@@ -32,18 +31,18 @@ namespace SimpleAlgorithms.loop
 
         public static void question3(int[] numbers)
         { // Sayılar listesindeki tek sayıların karesini alınız.
-            foreach(int number in numbers)
+            foreach (int number in numbers)
             {
                 if (number % 2 == 1)
                 {
-                    Console.WriteLine(number*number);
+                    Console.WriteLine(number * number);
                 }
             }
         }
 
         public static void question4(int start, int end)
         { // Başlangıç ve bitiş değelerini kullanıcadan alıp aradaki tüm tek sayıları ekrana yazdırın.
-            for (int i = start; i<end; i++)
+            for (int i = start; i < end; i++)
             {
                 if (i % 2 == 1)
                 {
@@ -54,7 +53,7 @@ namespace SimpleAlgorithms.loop
 
         public static void question5()
         { //1-100 arasındaki sayıları azalan şekilde yazdırın.
-            for (int i=99; i>1;i--)
+            for (int i = 99; i > 1; i--)
             {
                 Console.WriteLine(i);
             }
@@ -64,17 +63,17 @@ namespace SimpleAlgorithms.loop
         { // Kullanıcıdan alacağınız 5 sayıyı ekranda sıralı bir şekilde yazdırın.
             List<int> numbers = new List<int>();
             Console.WriteLine("5 Sayı Giriniz: ");
-            for (int i=0; i<5;i++)
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine($"Sayı {i+1}: ");
+                Console.WriteLine($"Sayı {i + 1}: ");
                 int number = Convert.ToInt32(Console.ReadLine());
                 numbers.Add(number);
             }
             //Sıralama
-            for (int i=0; i<numbers.Count; i++)
+            for (int i = 0; i < numbers.Count; i++)
             {
                 int helper = 0;
-                for (int j=i+1;  j<numbers.Count; j++)
+                for (int j = i + 1; j < numbers.Count; j++)
                 {
                     if (numbers[i] > numbers[j])
                     {
@@ -140,8 +139,8 @@ namespace SimpleAlgorithms.loop
             Console.WriteLine("Bir sayı giriniz: ");
             int number = Convert.ToInt32(Console.ReadLine());
             bool IsPrime = false;
-   
-            for (int i=2; i<number; i++)
+
+            for (int i = 2; i < number; i++)
             {
                 if (number % i == 0)
                 {
@@ -157,7 +156,7 @@ namespace SimpleAlgorithms.loop
             {
                 Console.WriteLine($"{number} Sayısı Asaldır.");
             }
-            else 
+            else
             {
                 Console.WriteLine($"{number} Sayısı Asal Değildir.");
             }
@@ -169,8 +168,8 @@ namespace SimpleAlgorithms.loop
             int total = 0;
             Console.WriteLine("Kaç Sayının Ortalamasını Bulmak İstiyorsunuz?");
             int numbers = Convert.ToInt32(Console.ReadLine());
-              
-            for (int i=0; i<numbers;i++)
+
+            for (int i = 0; i < numbers; i++)
             {
                 Console.WriteLine("Sayı Giriniz: ");
                 int number = Convert.ToInt32(Console.ReadLine());
@@ -184,7 +183,7 @@ namespace SimpleAlgorithms.loop
         public static void question10()
         {
             List<int> numbers = new List<int>();
-            for (int i=0; i<5;i++)
+            for (int i = 0; i < 5; i++)
             { //Girilen 5 sayı içerisindeki minimum ve maksimum değerleri bulan program?
                 Console.WriteLine("Sayı: ");
                 int number = Convert.ToInt32(Console.ReadLine());
@@ -192,7 +191,7 @@ namespace SimpleAlgorithms.loop
             }
             int min = numbers[0];
             int max = numbers[0];
-            for (int i=1; i<numbers.Count; i++)
+            for (int i = 1; i < numbers.Count; i++)
             {
                 if (numbers[i] < min)
                 {
@@ -210,7 +209,7 @@ namespace SimpleAlgorithms.loop
         { //N’e kadar tek sayıları yazdıran program?
             Console.WriteLine("N: ");
             int n = Convert.ToInt32(Console.ReadLine());
-            for(int i=0; i<n;i++)
+            for (int i = 0; i < n; i++)
             {
                 if (i % 2 == 1)
                 {
@@ -223,7 +222,7 @@ namespace SimpleAlgorithms.loop
         { //Girilen sayının tam bölenlerini bulan program?
             Console.WriteLine("Sayı: ");
             int number = Convert.ToInt32(Console.ReadLine());
-            for (int i=1; i<number;i++)
+            for (int i = 1; i < number; i++)
             {
                 if (number % i == 0)
                 {
@@ -237,9 +236,9 @@ namespace SimpleAlgorithms.loop
             Console.WriteLine("Sayı: ");
             int number = Convert.ToInt32(Console.ReadLine());
             int count = 0;
-            for (int i=1; i<number; i++)
+            for (int i = 1; i < number; i++)
             {
-                if (number %i == 0)
+                if (number % i == 0)
                 {
                     count++;
                 }
@@ -255,7 +254,7 @@ namespace SimpleAlgorithms.loop
             int total = 0;
             int multi = 1;
 
-            for (int i=1; i<n; i++)
+            for (int i = 1; i < n; i++)
             {
                 if (i % 2 == 1)
                 {
@@ -274,7 +273,7 @@ namespace SimpleAlgorithms.loop
             Console.WriteLine("Sayı: ");
             int number = Convert.ToInt32(Console.ReadLine());
             int fak = 1;
-            for (int i=1; i<=number;i++)
+            for (int i = 1; i <= number; i++)
             {
                 fak *= i;
             }
@@ -289,7 +288,7 @@ namespace SimpleAlgorithms.loop
             int b = 1;
             int c = 0;
 
-            for ( int i=0; i<n;i++)
+            for (int i = 0; i < n; i++)
             {
                 Console.Write(c + " ");
                 a = b;
@@ -306,7 +305,7 @@ namespace SimpleAlgorithms.loop
             int negatif = 0;
             int sifir = 0;
 
-            for ( int i=0; i<n; i++)
+            for (int i = 0; i < n; i++)
             {
                 Console.WriteLine("Sayı: ");
                 int sayi = Convert.ToInt32(Console.ReadLine());
@@ -315,13 +314,13 @@ namespace SimpleAlgorithms.loop
                 {
                     negatif += 1;
                 }
-                if (sayi > 0) 
+                if (sayi > 0)
                 {
                     pozitif += 1;
                 }
-                if (sayi == 0 )
+                if (sayi == 0)
                 {
-                    sifir += 1; 
+                    sifir += 1;
                 }
             }
             Console.WriteLine($"Pozitif Sayısı:{pozitif}, Negatif Sayısı:{negatif}, Sıfır Sayısı:{sifir}");
@@ -339,7 +338,7 @@ namespace SimpleAlgorithms.loop
             int artis = Convert.ToInt32(Console.ReadLine());
 
             int helper = ilkEleman;
-            for (int i=0; i<toplamEleman; i++)
+            for (int i = 0; i < toplamEleman; i++)
             {
                 Console.Write(helper + " ");
                 helper += artis;
@@ -352,7 +351,7 @@ namespace SimpleAlgorithms.loop
             int number = Convert.ToInt32(Console.ReadLine());
             int helper = number;
             List<int> list = new List<int>();
-            for (int i=2; i<=helper; i++)
+            for (int i = 2; i <= helper; i++)
             {
                 /* İlk denediğim yol (doğru ama uzun)
                 for (int j=0;  j<helper; j++)
@@ -372,7 +371,7 @@ namespace SimpleAlgorithms.loop
                 while (helper % i == 0)
                 {
                     list.Add(i);
-                    helper /= i; 
+                    helper /= i;
                 }
             }
             Console.Write($"{number}'ın asal çarpanları: ");
@@ -384,19 +383,19 @@ namespace SimpleAlgorithms.loop
 
         public static void question20()
         { // Girilen sayının basamak değerleri çarpımını bulunuz?
-            
+
             Console.WriteLine("Sayı: ");
             int number = Convert.ToInt32(Console.ReadLine());
             string stringNumber = number.ToString();
             int result = 1;
 
-            for (int i=0; i<stringNumber.Length; i++)
+            for (int i = 0; i < stringNumber.Length; i++)
             {
                 int rakam = stringNumber[i] - '0';
                 result *= rakam;
             }
             Console.WriteLine($"{number} basamak değerleri çarpımı: {result}");
-            
+
         }
 
         public static void question21()
@@ -405,18 +404,18 @@ namespace SimpleAlgorithms.loop
             int number = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("k: ");
             char k = Convert.ToChar(Console.ReadLine());
-            string stringNumber =number.ToString();
+            string stringNumber = number.ToString();
 
             List<char> list = new List<char>();
 
-            for (int i=0; i<stringNumber.Length;i++)
+            for (int i = 0; i < stringNumber.Length; i++)
             {
                 if (stringNumber[i] != k)
                 {
                     list.Add(stringNumber[i]);
                 }
             }
-            foreach (char i in list) 
+            foreach (char i in list)
             {
                 Console.Write(i + " ");
             }
@@ -429,7 +428,7 @@ namespace SimpleAlgorithms.loop
             string stringNumber = number.ToString();
             int result = 0;
 
-            for (int i=0; i<stringNumber.Length;i++)
+            for (int i = 0; i < stringNumber.Length; i++)
             {
                 result += 1;
             }
