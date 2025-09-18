@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            // LOOP
+                                    // LOOP
             int[] numbers = { 1, 3, 5, 7, 9, 12, 19, 21 };
             // A_Loop.question1(numbers);
             // A_Loop.question2(numbers);
@@ -25,12 +25,14 @@
             // A_Loop.question17();
             // A_Loop.question18();
             // A_Loop.question19();
-            // A_Loop.question20();
-            // A_Loop.question21();
-            // A_Loop.question22();
-            // A_Loop.question23();
-            // A_Loop.question24();
-            A_Loop.question25();
+
+                                    // LOOP2
+            // A_Loop2.question20();
+            // A_Loop2.question21();
+            // A_Loop2.question22();
+            // A_Loop2.question23();
+            // A_Loop2.question24();
+            A_Loop2.question25();
         }
     }
 }

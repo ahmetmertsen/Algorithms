@@ -10,7 +10,7 @@ namespace SimpleAlgorithms
     internal class A_Loop
     {
         public static void question1(int[] numbers)
-        { //Sayılar listesindeki hangi sayılar 3'ün katıdır ?
+        {
             foreach (int number in numbers)
             {
                 if (number % 3 == 0)
@@ -21,7 +21,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question2(int[] numbers)
-        { //Sayılar listesinde sayıların toplamı kaçtır?
+        {
             int total = 0;
             foreach (int number in numbers)
             {
@@ -31,7 +31,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question3(int[] numbers)
-        { // Sayılar listesindeki tek sayıların karesini alınız.
+        {
             foreach (int number in numbers)
             {
                 if (number % 2 == 1)
@@ -42,7 +42,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question4(int start, int end)
-        { // Başlangıç ve bitiş değelerini kullanıcadan alıp aradaki tüm tek sayıları ekrana yazdırın.
+        {
             for (int i = start; i < end; i++)
             {
                 if (i % 2 == 1)
@@ -53,7 +53,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question5()
-        { //1-100 arasındaki sayıları azalan şekilde yazdırın.
+        {
             for (int i = 99; i > 1; i--)
             {
                 Console.WriteLine(i);
@@ -61,7 +61,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question6()
-        { // Kullanıcıdan alacağınız 5 sayıyı ekranda sıralı bir şekilde yazdırın.
+        {
             List<int> numbers = new List<int>();
             Console.WriteLine("5 Sayı Giriniz: ");
             for (int i = 0; i < 5; i++)
@@ -92,10 +92,7 @@ namespace SimpleAlgorithms
 
 
         public static void question7()
-        { // 1-100 arasında rastgele üretilecek bir sayıyı aşağı yukarı ifadeleri ile buldurmaya çalışın. (hak = 5)
-          // **"random modülü"
-          // **100 üzerinden puanlama yapın.Her soru 20 puan.
-          // **Hak bilgisini kullanıcdan alın ve her soru belirtilen can sayısı üzerinden hesaplansın.
+        {
             Console.WriteLine("Hak Sayısı: ");
             int numberOfRight = Convert.ToInt32(Console.ReadLine());
 
@@ -135,8 +132,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question8()
-        { // Girilen bir sayının asal olup olmadığını bulun.
-          // **Asal sayı 1 ve kendisi hariç tam böleni olmayan sayılara denir.
+        {
             Console.WriteLine("Bir sayı giriniz: ");
             int number = Convert.ToInt32(Console.ReadLine());
             bool IsPrime = false;
@@ -165,7 +161,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question9()
-        { // Girilen sayıların ortalamasını bulan program.
+        {
             int total = 0;
             Console.WriteLine("Kaç Sayının Ortalamasını Bulmak İstiyorsunuz?");
             int numbers = Convert.ToInt32(Console.ReadLine());
@@ -185,7 +181,7 @@ namespace SimpleAlgorithms
         {
             List<int> numbers = new List<int>();
             for (int i = 0; i < 5; i++)
-            { //Girilen 5 sayı içerisindeki minimum ve maksimum değerleri bulan program?
+            {
                 Console.WriteLine("Sayı: ");
                 int number = Convert.ToInt32(Console.ReadLine());
                 numbers.Add(number);
@@ -207,7 +203,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question11()
-        { //N’e kadar tek sayıları yazdıran program?
+        { 
             Console.WriteLine("N: ");
             int n = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < n; i++)
@@ -220,7 +216,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question12()
-        { //Girilen sayının tam bölenlerini bulan program?
+        {
             Console.WriteLine("Sayı: ");
             int number = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i < number; i++)
@@ -233,7 +229,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question13()
-        {// Girilen sayının tam bölenlerinin sayısını bulan program?
+        {
             Console.WriteLine("Sayı: ");
             int number = Convert.ToInt32(Console.ReadLine());
             int count = 0;
@@ -249,7 +245,7 @@ namespace SimpleAlgorithms
 
 
         public static void question14()
-        { // n’e kadar ki tek sayıların toplamı, çift sayıların çarpımını hesaplayan program?
+        {
             Console.WriteLine("N: ");
             int n = Convert.ToInt32(Console.ReadLine());
             int total = 0;
@@ -270,7 +266,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question15()
-        { // Girilen sayının faktöriyelini hesaplayan program?
+        {
             Console.WriteLine("Sayı: ");
             int number = Convert.ToInt32(Console.ReadLine());
             int fak = 1;
@@ -282,7 +278,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question16()
-        { // Girilen n değerine göre Fibonacci serisinin ( 0 1 1 2 3 5 8 … ) ilk n terimini hesaplayınız?
+        {
             Console.WriteLine("n: ");
             int n = Convert.ToInt32(Console.ReadLine());
             int a = 0;
@@ -299,7 +295,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question17()
-        { // Girilen n adet sayı içerisinden pozitif, negatif ve sıfır sayısının kaçar adet tekrarlandığını bulan program?
+        {
             Console.WriteLine("n: ");
             int n = Convert.ToInt32(Console.ReadLine());
             int pozitif = 0;
@@ -328,7 +324,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question18()
-        { // Serinin ilk elemanı, toplam eleman sayısını ve artış değeri girildiğinde seri sonucunu hesaplayan program?
+        {
             Console.WriteLine("İlk Eleman: ");
             int ilkEleman = Convert.ToInt32(Console.ReadLine());
 
@@ -347,7 +343,7 @@ namespace SimpleAlgorithms
         }
 
         public static void question19()
-        { // Girilen bir sayının asal çarpanlarını bulan program?
+        {
             Console.WriteLine("Sayı: ");
             int number = Convert.ToInt32(Console.ReadLine());
             int helper = number;
@@ -382,108 +378,6 @@ namespace SimpleAlgorithms
             }
         }
 
-        public static void question20()
-        { // Girilen sayının basamak değerleri çarpımını bulunuz?
-
-            Console.WriteLine("Sayı: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            string stringNumber = number.ToString();
-            int result = 1;
-
-            for (int i = 0; i < stringNumber.Length; i++)
-            {
-                int rakam = stringNumber[i] - '0';
-                result *= rakam;
-            }
-            Console.WriteLine($"{number} basamak değerleri çarpımı: {result}");
-
-        }
-
-        public static void question21()
-        { // Girilen sayının basamak değerlerinde k rakamı olmayanları listeleyen program?
-            Console.WriteLine("Sayı: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("k: ");
-            char k = Convert.ToChar(Console.ReadLine());
-            string stringNumber = number.ToString();
-
-            List<char> list = new List<char>();
-
-            for (int i = 0; i < stringNumber.Length; i++)
-            {
-                if (stringNumber[i] != k)
-                {
-                    list.Add(stringNumber[i]);
-                }
-            }
-            foreach (char i in list)
-            {
-                Console.Write(i + " ");
-            }
-        }
-
-        public static void question22()
-        { // Girilen sayının basamak sayısını ekrana yazdıran program?
-            Console.WriteLine("Sayı: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            string stringNumber = number.ToString();
-            int result = 0;
-
-            for (int i = 0; i < stringNumber.Length; i++)
-            {
-                result += 1;
-            }
-            Console.WriteLine($"Basamak Sayısı: {result}");
-        }
-
-        public static void question23()
-        { // Girilen sayının basamak değerleri kadar yıldızı yan yana yazdıran program?
-            Console.WriteLine("Sayı: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            string stringNumber = number.ToString();
-
-            for (int i = 0; i < stringNumber.Length; i++)
-            {
-                Console.Write("*" + " ");
-            }
-        }
-
-        public static void question24()
-        { //Girilen cümleyi tersten yazdırın
-            Console.WriteLine("Cümle: ");
-            string cumle = Convert.ToString(Console.ReadLine());
-
-            string tersCumle = "";
-            for (int i = cumle.Length - 1; i >= 0; i--)
-            {
-                tersCumle += cumle[i];
-            }
-            Console.WriteLine($"Ters Cümle: {tersCumle}");
-        }
-
-        public static void question25()
-        { //Girilen cümledeki sesli ve sessiz harf sayısını bulun.
-            Console.WriteLine("Cümle: ");
-            string cumle = Convert.ToString(Console.ReadLine());
-            char[] sesliHarfler = { 'A', 'a', 'E', 'e', 'I', 'ı', 'İ', 'i', 'O', 'o', 'Ö', 'ö', 'U', 'u', 'Ü', 'ü' };
-
-            int sesliHarflerSayisi = 0;
-            int helper = 0;
-            for (int i = 0; i < cumle.Length; i++)
-            {
-                if (!Char.IsLetter(cumle[i]))
-                {
-                    helper++;
-                }
-                for (int j = 0; j < sesliHarfler.Length; j++)
-                {
-                    if (cumle[i] == sesliHarfler[j])
-                    {
-                        sesliHarflerSayisi++;
-                    }
-                }
-            }
-            Console.WriteLine($"Sesli Harf Sayısı:{sesliHarflerSayisi}, Sessiz Harf Sayısı:{(cumle.Length - helper) - sesliHarflerSayisi}");
-        }
+   
     }
 }
