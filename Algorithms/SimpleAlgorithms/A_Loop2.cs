@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace SimpleAlgorithms
 {
-    public class A_Loop2
+    internal class A_Loop2
     {
         public static void question20()
         {
-
             Console.WriteLine("Sayı: ");
             int number = Convert.ToInt32(Console.ReadLine());
             string stringNumber = number.ToString();
@@ -110,6 +109,49 @@ namespace SimpleAlgorithms
                 }
             }
             Console.WriteLine($"Sesli Harf Sayısı:{sesliHarflerSayisi}, Sessiz Harf Sayısı:{(cumle.Length - helper) - sesliHarflerSayisi}");
+        }
+
+        public static void question26()
+        { 
+            Console.WriteLine("Cümle: ");
+            string cumle = Convert.ToString(Console.ReadLine());
+            string harfler = "";
+            int count = 1;
+
+            for (int i=0; i<cumle.Length; i++)
+            {
+                if (!Char.IsLetter(cumle[i]))
+                {
+                    continue;
+                }
+
+                bool varMi=false;
+                for (int j=0; j<harfler.Length; j++)
+                {
+                    if (cumle[i] == harfler[j])
+                    {
+                        varMi = true;
+                        break;
+                    }
+                }
+
+                if ( varMi == true)
+                {
+                    continue;
+                }else
+                {
+                    harfler += cumle[i];
+                    for (int z = i + 1; z < cumle.Length; z++)
+                    {
+                        if (cumle[i] == cumle[z])
+                        {
+                            count++;
+                        }
+                    }
+                }
+                Console.WriteLine($"Harf: {cumle[i]}, Adeti:{count}");
+                count = 1;
+            }
         }
     }
 }
