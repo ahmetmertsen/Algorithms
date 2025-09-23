@@ -153,5 +153,72 @@ namespace SimpleAlgorithms
                 count = 1;
             }
         }
+
+        public static void question27()
+        {
+            Console.WriteLine("Sayı Giriniz: ");
+            int sayi = Convert.ToInt32(Console.ReadLine());
+
+            bool isPronic = false;
+            for (int i=1; i*(i+1)<=sayi; i++)
+            {
+                if (i*(i+1) == sayi)
+                {
+                    isPronic = true; 
+                    break;
+                }
+            }
+            if (isPronic == true) 
+            {
+                Console.WriteLine("Pronic sayıdır.");
+            } else
+            {
+                Console.WriteLine("Pronic sayı değildir.");
+            }
+        }
+
+        public static void question28()
+        {
+            Console.WriteLine("Sayı Giriniz:");
+            int sayi = Convert.ToInt32(Console.ReadLine());
+            int helper = sayi;
+
+            int total = 0;
+            while (sayi > 0)
+            {
+                total += sayi % 10;
+                sayi = sayi / 10;
+            }
+            if (helper % total == 0)
+            {
+                Console.WriteLine("Harshard sayıdır.");
+            } else
+            {
+                Console.WriteLine("Harshard sayı değildir.");
+            }
+        }
+
+        public static void question29()
+        {
+            Console.WriteLine("Sayı Giriniz: ");
+            string number = Convert.ToString(Console.ReadLine());
+
+            bool isJumbled = true;
+            for (int i = 0; i < number.Length-1; i++)
+            {
+                if (Math.Abs(number[i] - number[i+1]) > 1)
+                {
+                    isJumbled = false;
+                    break;
+                }
+            }
+            if (isJumbled == true)
+            {
+                Console.WriteLine("Jumbled Sayıdır.");
+            } else
+            {
+                Console.WriteLine("Jumbled Sayı Değildir.");
+            }
+        }
     }
 }
