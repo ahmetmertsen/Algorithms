@@ -439,7 +439,105 @@ namespace SimpleAlgorithms
                 }
             }
         }
-        
-        
+
+        public static void question37(List<int> list)
+        { 
+            int count = 1;
+            int maxNumber = 0;
+            int maxCount = 0;
+            List<int> numbers = new List<int>();
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                bool varMi = false;
+                for (int j =0; j < numbers.Count; j++)
+                {
+                    if (list[i] == list[j])
+                    {
+                        varMi = true;
+                        break;
+                    }
+                }
+
+                if (varMi) {
+                    continue;
+                } else
+                {
+                    numbers.Add(i);
+                    for (int z = i+1; z < list.Count; z++)
+                    {
+                        if (list[i] == list[z])
+                        {
+                            count++;
+                        }
+                        
+                    }
+                    if (count > maxCount)
+                    {
+                        maxNumber = list[i];
+                        maxCount = count;
+                    }
+                    count = 1;
+                }
+                
+            }
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] != maxNumber) 
+                {
+                   Console.Write(list[i] + " "); 
+                }
+            }
+        }
+
+        public static void question38()
+        {
+            Console.WriteLine("Sayı Giriniz: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int helperN = number;
+
+            int total = 0;
+            int helper = 0;
+            while (helperN> 0) {
+                helper = helperN % 10;
+
+                int fak = 1;
+                for (int j = helper; j > 0; j--)
+                {
+                    fak *= j;
+                }
+                total += fak;
+                helperN = helperN / 10;
+            }
+            if (total == number)
+            {
+                Console.WriteLine($"{number} sayısı Güçlü Sayıdır.");
+            } else
+            {
+                Console.WriteLine($"{number} sayısı Güçlü Sayı Değildir.");
+            }
+        }
+
+        public static void question39()
+        {
+            Console.WriteLine("İfade Giriniz: ");
+            string ifade = Convert.ToString(Console.ReadLine());
+
+            string ters = "";
+            for (int i=ifade.Length-1; i>=0; i--)
+            {
+                ters += ifade[i];
+            }
+
+            if (ifade == ters)
+            {
+                Console.WriteLine("İfade Palindrom");
+            } else
+            {
+                Console.WriteLine("İfade Palindrom değil.");
+            }
+        }
+ 
     }
 }

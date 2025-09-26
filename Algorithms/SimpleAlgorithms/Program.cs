@@ -43,7 +43,14 @@
             // A_Loop2.question33();
             // A_Loop2.question34();
             // A_Loop2.question35();
-            A_Loop2.question36();
+            // A_Loop2.question36();
+
+            //List<int> list = new List<int> {2,3,5,6,4,8,2,3,4,5,6,7,8,9,2,2};
+            //A_Loop2.question37(list);
+
+            //A_Loop2.question38();
+            A_Loop2.question39();
+
         }
     }
 }
