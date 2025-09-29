@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-                                    // LOOP
+                                                // LOOP
             int[] numbers = { 1, 3, 5, 7, 9, 12, 19, 21 };
             // A_Loop.question1(numbers);
             // A_Loop.question2(numbers);
@@ -27,6 +27,7 @@
             // A_Loop.question19();
 
             // LOOP2
+
             // A_Loop2.question20();
             // A_Loop2.question21();
             // A_Loop2.question22();
@@ -47,9 +48,20 @@
 
             //List<int> list = new List<int> {2,3,5,6,4,8,2,3,4,5,6,7,8,9,2,2};
             //A_Loop2.question37(list);
-
             //A_Loop2.question38();
-            A_Loop2.question39();
+            //A_Loop2.question39();
+
+
+            // LOOP3-SHAPES
+
+            // A_Loop3_shapes.q();
+            // A_Loop3_shapes.question1(10);
+            // A_Loop3_shapes.question2(10);
+            // A_Loop3_shapes.question3(10);
+            // A_Loop3_shapes.question4(10);
+            // A_Loop3_shapes.question5(10);
+            // A_Loop3_shapes.question6(10);
+            A_Loop3_shapes.question7(10);
 
         }
     }
