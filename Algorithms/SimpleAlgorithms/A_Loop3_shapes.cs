@@ -118,5 +118,82 @@ namespace SimpleAlgorithms
                 Console.WriteLine();
             }
         }
+
+        public static void quesiton8(int n)
+        {
+            for (int i=0; i<n;i++)
+            {
+                for(int j=0; j<2*n; j++)
+                {
+                    if (j+i == n || j-i== n)
+                    {
+                        Console.Write("*");
+                    } else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void quesiton9(int n)
+        {
+            for (int i=0; i<n;i++)
+            {
+                for (int j=0; j<2*n-1; j++)
+                {
+                    if (j >= n-1-i && j<= n-1+i)
+                    {
+                        Console.Write("* ");
+                    }
+                    else
+                    {
+                        Console.Write("  ");
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void question10(int n)
+        {
+            for (int i=0; i<n; i++)
+            {
+                for (int j=0; j<2*n-1; j++)
+                {
+                    if(j >=i && j<=2*n-2-i)
+                    {
+                        Console.Write("* ");
+                    } else
+                    {
+                        Console.Write("  ");
+                    }
+                }
+                Console.WriteLine();
+
+            }
+        }
+
+        public static void question11(int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                for (int j=0; j<=i; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+            for (int i=n-1; i>0; i--)
+            {
+                for (int j=i;j>0;j--)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+        }
+
     }
 }
