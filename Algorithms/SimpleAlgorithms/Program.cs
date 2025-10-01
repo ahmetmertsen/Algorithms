@@ -65,8 +65,10 @@
             // A_Loop3_shapes.quesiton8(10);
             // A_Loop3_shapes.quesiton9(5);
             // A_Loop3_shapes.question10(5);
-            A_Loop3_shapes.question11(5);
-
+            // A_Loop3_shapes.question11(10);
+            // A_Loop3_shapes.question12(10);
+            // A_Loop3_shapes.question13(10);
+            A_Loop3_shapes.question14(20);
         }
     }
 }

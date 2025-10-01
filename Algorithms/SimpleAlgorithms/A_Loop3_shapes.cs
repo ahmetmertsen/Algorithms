@@ -139,18 +139,19 @@ namespace SimpleAlgorithms
 
         public static void quesiton9(int n)
         {
-            for (int i=0; i<n;i++)
+            for (int i=1;i<=n;i++)
             {
-                for (int j=0; j<2*n-1; j++)
+                for (int j=1; j<=n-i;j++)
                 {
-                    if (j >= n-1-i && j<= n-1+i)
-                    {
-                        Console.Write("* ");
-                    }
-                    else
-                    {
-                        Console.Write("  ");
-                    }
+                    Console.Write("  ");
+                }
+                for (int z=1; z<=i; z++)
+                {
+                    Console.Write("* ");
+                }
+                for (int t = 1; t < i; t++)
+                {
+                    Console.Write("* ");
                 }
                 Console.WriteLine();
             }
@@ -158,39 +159,157 @@ namespace SimpleAlgorithms
 
         public static void question10(int n)
         {
-            for (int i=0; i<n; i++)
+            for (int i=1; i<=n;i++)
             {
-                for (int j=0; j<2*n-1; j++)
+                for(int j=1; j<i;j++)
                 {
-                    if(j >=i && j<=2*n-2-i)
-                    {
-                        Console.Write("* ");
-                    } else
-                    {
-                        Console.Write("  ");
-                    }
+                    Console.Write("  ");
                 }
+                for(int z=1; z<=n+1-i;z++)
+                {
+                    Console.Write("* ");
+                }
+                
+                for(int t=1; t<=n-i; t++)
+                {
+                    Console.Write("* ");
+                }
+                
                 Console.WriteLine();
-
             }
         }
 
         public static void question11(int n)
         {
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n/2; i++)
             {
-                for (int j=0; j<=i; j++)
+                for (int j=1; j<=i; j++)
                 {
                     Console.Write("* ");
                 }
                 Console.WriteLine();
             }
-            for (int i=n-1; i>0; i--)
+            for (int i=n/2-1; i>=1; i--)
             {
-                for (int j=i;j>0;j--)
+                for (int j=1;j<=i;j++)
                 {
                     Console.Write("* ");
                 }
+                Console.WriteLine();
+            }
+        }
+
+        public static void question12(int n)
+        {
+            for (int i=1; i<=n/2; i++)
+            {
+                for (int j=1;j<=n/2-i; j++)
+                {
+                    Console.Write("  ");
+                }
+                for (int z=1;z<=i;z++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+
+            for (int i=1;i<=n/2-1;i++)
+            {
+                for (int j=1;j<=i;j++)
+                {
+                    Console.Write("  ");
+                }
+                for(int z=1;z<=n/2-i;z++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void question13(int n)
+        {
+            for(int i=1;i<=n/2;i++)
+            {
+                for(int j=1; j<=n/2-i;j++)
+                {
+                    Console.Write("  ");
+                }
+                for(int z=1; z<=i; z++)
+                {
+                    Console.Write("* ");
+                }
+                for(int t=1; t<i; t++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+            for(int i=1; i<=n/2-1;i++)
+            {
+                for(int j=1; j<=i; j++)
+                {
+                    Console.Write("  ");
+                }
+                for(int z=1; z<=(n/2)-i;z++)
+                {
+                    Console.Write("* ");
+                }
+                for(int t=1; t<=(n/2-1)-i;t++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void question14(int n)
+        {
+            for (int i = 1; i <= n / 2; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("* ");
+                }
+                for (int z = 1; z <= (n / 2) - i; z++)
+                {
+                    Console.Write("  ");
+                }
+                for (int t = 1; t <= (n / 2 - 1) - i; t++)
+                {
+                    Console.Write("  ");
+                }
+                for (int x = 1; x <= i; x++)
+                {
+                    if (i == n/2 && x == n/2)
+                    {
+                        continue;
+                    }
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+            for(int i=1; i<=n/2-1; i++)
+            {
+                for(int j=1; j<=n/2-i;j++)
+                {
+                    Console.Write("* ");
+                }
+                for(int z=1; z<=i;z++)
+                {
+                    Console.Write("  ");
+                }
+                
+                for (int t = 1; t < i; t++)
+                {
+                    Console.Write("  ");
+                }
+                for (int x=1; x<=(n/2)-i;  x++)
+                {
+                    Console.Write("* ");
+                }
+                 
                 Console.WriteLine();
             }
         }
