@@ -9,6 +9,7 @@ namespace SimpleAlgorithms
 {
     internal class A_Loop3_shapes
     {
+        //16 bakılacak, 19 ve 20 tek ve çift durumuna göre farklı çıkıyor.Tekrardan bak!
 
         public static void q()
         {
@@ -312,6 +313,182 @@ namespace SimpleAlgorithms
                  
                 Console.WriteLine();
             }
+        }
+
+        public static void question15(int n)
+        {
+            for (int i = 1; i<=n/2; i++)
+            {
+                for (int j=1; j<i; j++)
+                {
+                    Console.Write("  ");
+                }
+                for(int z=1; z<=n/2+1-i;z++)
+                {
+                    Console.Write("* ");
+                }
+                for(int t=1; t<=n/2-i; t++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+            
+            for(int i = 1; i<=n/2;i++)
+            {
+                for(int j=1; j<=n/2-i;j++)
+                {
+                    Console.Write("  ");
+                }
+                for(int z=1; z<=i; z++)
+                {
+                    Console.Write("* ");
+                }
+                for(int t=1; t<i; t++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void question16(int n)
+        { //Daha sonra bak.
+            for(int i = 2; i<=n/2+1;i +=2)
+            {
+                for(int j=1; j<n/2-i; j+=2)
+                {
+                    Console.Write("  ");
+                }
+                for(int z=1; z<=i; z++)
+                {
+                    Console.Write("* ");
+                }
+                for(int t=i; t >= 0; t--)
+                {
+                    Console.Write("  ");
+                }
+                for(int x=1; x<=i; x++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+
+            }
+        }
+
+        public static void question17(int n)
+        {
+            for(int i=1; i<=n;  i++)
+            {
+                for(int j=1; j<=n;j++)
+                {
+                    if(i == 1 || i == n)
+                    {
+                        Console.Write("* ");
+                    } else
+                    {
+                        if(j == 1 || j == n)
+                        {
+                            Console.Write("* ");
+                        } else
+                        {
+                            Console.Write("  ");
+                        }
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void question18(int n)
+        {
+            for(int i=1; i<=n;i++)
+            {
+                for (int j=1; j<n*2; j++)
+                {
+                    if (j+i == n+1 || j-i==n-1)
+                    {
+                        Console.Write("* ");
+                    } else
+                    {
+                        if(i==n)
+                        {
+                            Console.Write("* ");
+                        } else
+                        {
+                            Console.Write("  ");
+                        }
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void question19(int n)
+        {
+            for(int i=1; i<=n/2; ++i)
+            {
+                for(int j=1; j<n; j++)
+                {
+                    if(j+i==n/2+1 || j-i==n/2-1)
+                    {
+                        Console.Write("* ");
+                    }
+                    else
+                    {
+                        Console.Write("  ");
+                    }
+                }
+                Console.WriteLine();
+            }
+            for(int i=1; i<=n/2-1; i++)
+            {
+                for(int j=1; j<n; j++)
+                {
+                    if (j+i == n-1 || j-i==1)
+                    {
+                        Console.Write("* ");
+                    } else
+                    {
+                        Console.Write("  ");
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void question20(int n)
+        {
+            for(int i=1; i<=n/2;i++)
+            {
+                for(int j=1; j<n;j++)
+                {
+                    if(j+i==n || j-i==0 || i==1)
+                    {
+                        Console.Write("* ");
+                    } else
+                    {
+                        Console.Write("  ");
+                    }
+                }
+                Console.WriteLine();
+            }
+            for(int i=1; i<=n/2-1;i++)
+            {
+                for(int j=1; j<n; j++)
+                {
+                    if (j+i==n/2 || j-i==n/2 || i==n/2-1)
+                    {
+                        Console.Write("* ");
+                    } else
+                    {
+                        Console.Write("  ");
+                    }
+                }
+                Console.WriteLine();
+            }
+            
         }
 
     }
