@@ -73,8 +73,14 @@
             // A_Loop3_shapes.question16(8);
             // A_Loop3_shapes.question17(5);
             // A_Loop3_shapes.question18(5);
-            // A_Loop3_shapes.question19(10);
-            A_Loop3_shapes.question20(10);
+            // A_Loop3_shapes.question19(11);
+            // A_Loop3_shapes.question20(10);
+
+
+            // STRİNG
+            // B_String.question1();
+            // B_String.question2();
+            B_String.question3();
         }
     }
 }

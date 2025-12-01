@@ -131,6 +131,7 @@ namespace SimpleAlgorithms
             }
         }
 
+
         public static void question8()
         {
             Console.WriteLine("Bir sayı giriniz: ");

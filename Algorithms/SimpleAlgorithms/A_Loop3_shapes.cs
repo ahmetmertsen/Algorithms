@@ -427,26 +427,35 @@ namespace SimpleAlgorithms
 
         public static void question19(int n)
         {
-            for(int i=1; i<=n/2; ++i)
+            int orta;
+            if (n%2==0)
             {
-                for(int j=1; j<n; j++)
-                {
-                    if(j+i==n/2+1 || j-i==n/2-1)
-                    {
-                        Console.Write("* ");
-                    }
-                    else
-                    {
-                        Console.Write("  ");
-                    }
-                }
-                Console.WriteLine();
+                orta = n/2;
             }
-            for(int i=1; i<=n/2-1; i++)
+            else
             {
-                for(int j=1; j<n; j++)
+                orta = n/2+1;
+            }
+            for (int i = 1; i <= orta; ++i)
                 {
-                    if (j+i == n-1 || j-i==1)
+                    for (int j = 1; j < n; j++)
+                    {
+                        if (j + i == orta+1 || j-i == orta-1)
+                        {
+                            Console.Write("* ");
+                        }
+                        else
+                        {
+                            Console.Write("  ");
+                        }
+                    }
+                    Console.WriteLine();
+                }
+            for(int i=1; i<=orta-1; i++)
+            {
+                for(int j=1; j<=2*orta-1; j++)
+                {
+                    if (j+i == 2*orta-1 || j-i==1)
                     {
                         Console.Write("* ");
                     } else
