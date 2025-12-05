@@ -80,7 +80,9 @@
             // STRİNG
             // B_String.question1();
             // B_String.question2();
-            B_String.question3();
+            // B_String.question3();
+            // B_String.question4();
+            B_String.question5();
         }
     }
 }

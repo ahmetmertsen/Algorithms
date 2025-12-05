@@ -88,5 +88,49 @@ namespace SimpleAlgorithms
             }
         }
 
+        public static void question4()
+        {
+            Console.WriteLine("Yazı: ");
+            string yazi = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("k: ");
+            int k = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("r: ");
+            int r = Convert.ToInt32(Console.ReadLine());
+
+            string copy = "";
+            for (int i = 1; i <= yazi.Length; i++)
+            {
+                if (i >= k && i <= r)
+                {
+                    copy += yazi[i-1];
+                }
+            }
+            Console.WriteLine($"Kopyalanan yazı: {copy}");
+        }
+
+        public static void question5()
+        {
+            Console.WriteLine("Yazı: ");
+            string yazi= Convert.ToString(Console.ReadLine());
+            yazi += " ";
+
+            int karakter = 0;
+            int rakam = 0;
+            int kelime = 0;
+            for (int i = 0; i < yazi.Length; i++)
+            {
+                karakter++;
+                int ascii = (int)yazi[i];
+                if (ascii >= 48 && ascii <= 57)
+                {
+                    rakam++;
+                }
+                if (yazi[i] == ' ')
+                {
+                    kelime++;
+                }
+            }
+            Console.WriteLine($"Karakter Sayısı: {karakter-1}\nRakam Sayısı: {rakam}\nKelime Sayısı: {kelime}");
+        }
     }
 }
