@@ -132,5 +132,107 @@ namespace SimpleAlgorithms
             }
             Console.WriteLine($"Karakter Sayısı: {karakter-1}\nRakam Sayısı: {rakam}\nKelime Sayısı: {kelime}");
         }
+
+        public static void question6()
+        {
+            Console.Write("Yazı: ");
+            string yazi = Convert.ToString(Console.ReadLine());
+            Console.Write("Aranan: ");
+            string aranan = Convert.ToString(Console.ReadLine());
+
+            for (int i = 0; i < yazi.Length; i++)
+            {
+                string helper = "";
+                if (yazi[i] == aranan[0])
+                {
+                    int count = i;
+                    for (int j = 0;  j < aranan.Length; j++)
+                    {
+                        helper += yazi[count];
+                        count++;
+                    }
+                    if (aranan == helper)
+                    {
+                        string sonuc = yazi.Substring(0, i) + "\"" + aranan + "\"" + yazi.Substring(i + aranan.Length);
+                        Console.WriteLine(sonuc);
+                        return;
+                    }
+                }
+            }
+        }
+
+        public static void question7()
+        {
+            Console.Write("Yazı: ");
+            string yazi = Convert.ToString(Console.ReadLine());
+            Console.Write("Karekter: ");
+            char karekter = Convert.ToChar(Console.ReadLine());
+
+            string sonuc = "";
+            for (int i = 0; i< yazi.Length; i++)
+            {
+                if (yazi[i] != karekter)
+                {
+                    sonuc += yazi[i];
+                }
+            }
+            Console.WriteLine(sonuc);
+        }
+
+        public static void question8()
+        {
+            Console.Write("Yazı: ");
+            string yazi = Convert.ToString(Console.ReadLine());
+            Console.Write("Kelime: ");
+            string kelime = Convert.ToString(Console.ReadLine());
+
+            for (int i = 0; i< yazi.Length; i++)
+            {
+                string helper = "";
+                if (yazi[i] == kelime[0])
+                {
+                    int count = i;
+                    for (int j = 0; j < kelime.Length; j++)
+                    {
+                        helper += yazi[count];
+                        count++;
+                    }
+                    if (kelime == helper)
+                    {
+                        string sonuc = yazi.Substring(0,i) + yazi.Substring(i + kelime.Length);
+                        Console.WriteLine(sonuc);
+                        return;
+                    }
+                }
+            }
+        }
+
+        public static void question9()
+        {
+            Console.Write("Yazı: ");
+            string yazi = Convert.ToString(Console.ReadLine());
+
+            string noktalama = ".,!?;:()[]{}\"'—-…";
+
+            string sonuc = "";
+
+            for (int i = 0; i < yazi.Length; i++)
+            {
+                bool isPunc = false;
+                for (int j = 0; j < noktalama.Length; j++)
+                {
+                    if (yazi[i] == noktalama[j])
+                    {
+                        isPunc = true;
+                        break;
+                    }
+                }
+
+                if (!isPunc)
+                    sonuc += yazi[i];
+            }
+
+            Console.WriteLine(sonuc);
+        }
     }
 }
