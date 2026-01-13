@@ -162,5 +162,113 @@ namespace SimpleAlgorithms
             Console.WriteLine($"En Büyük Sayı: {maxNumber}");
             #endregion
         }
+
+
+        public static void question5()
+        {
+            int[,] matris = new int[5, 5];
+
+            Random rand = new Random();
+            int min = 1, max = 10;
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    matris[i, j] = rand.Next(min, max);
+                    Console.Write(matris[i, j] + " ");
+                }
+                Console.WriteLine("");
+            }
+
+            int matrisIzi = 0;
+            for(int i = 0;i < 5; i++)
+            {
+                for(int j = 0; j<5;j++)
+                {
+                    if (i == j)
+                    {
+                        matrisIzi += matris[i, j];
+                    }
+                }
+            }
+            Console.Write($"Matris İzi: {matrisIzi}");
+        }
+
+        public static void question6()
+        {
+            int[,] matris = new int[5, 5];
+
+            Random rand = new Random();
+            int min = 1, max = 10;
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    matris[i, j] = rand.Next(min, max);
+                    Console.Write(matris[i, j] + " ");
+                }
+                Console.WriteLine("");
+            }
+
+            Console.WriteLine("---------------");
+
+            Console.Write("k (0-24 arası indeks): ");
+            int k = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Yerleştirelecek Sayı: ");
+            int sayi = Convert.ToInt32(Console.ReadLine());
+
+            int cols = matris.GetLength(1);
+            int row = k / cols;
+            int col = k % cols;
+
+            matris[row, col] = sayi;
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                    Console.Write(matris[i, j] + " ");
+                Console.WriteLine();
+            }
+        }
+
+        public static void question7()
+        {
+            int[,] matris = new int[5, 5];
+
+            Random rand = new Random();
+            int min = 1, max = 10;
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    matris[i, j] = rand.Next(min, max);
+                    Console.Write(matris[i, j] + " ");
+                }
+                Console.WriteLine("");
+            }
+
+            Console.WriteLine("---------------");
+
+            int[,] transpoz = new int[5, 5];
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    transpoz[j, i] = matris[i, j];
+                }
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.Write(transpoz[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
